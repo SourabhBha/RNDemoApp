@@ -1,7 +1,14 @@
 import React from 'react';
-import { TextInput, StyleSheet } from 'react-native';
+import {TextInput, StyleSheet, Keyboard} from 'react-native';
 
-const AppTextField = ({ value, onChangeText, placeholder, secureTextEntry, keyboardType, ...rest }) => (
+const AppTextField = ({
+  value,
+  onChangeText,
+  placeholder,
+  secureTextEntry,
+  keyboardType,
+  ...rest
+}) => (
   <TextInput
     style={styles.input}
     value={value}
@@ -10,6 +17,8 @@ const AppTextField = ({ value, onChangeText, placeholder, secureTextEntry, keybo
     secureTextEntry={secureTextEntry}
     keyboardType={keyboardType}
     autoCapitalize="none"
+    returnKeyType="default"
+    // onSubmitEditing={Keyboard.dismiss}
     {...rest}
   />
 );
@@ -27,4 +36,3 @@ const styles = StyleSheet.create({
 });
 
 export default AppTextField;
-

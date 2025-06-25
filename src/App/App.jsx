@@ -4,9 +4,11 @@
  *
  * @format
  */
+import Toast from 'react-native-toast-message';
 import { AuthProvider } from '../Context/AuthContext';
 import AppNavigator from './AppNavigator';
 import { NavigationContainer } from '@react-navigation/native';
+
 
 
 export default function App() {
@@ -14,7 +16,9 @@ export default function App() {
     <AuthProvider>
       <NavigationContainer>
          <AppNavigator />
+         
       </NavigationContainer>
+      <Toast />
     </AuthProvider>
   );
 }

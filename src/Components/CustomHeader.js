@@ -57,6 +57,7 @@ export default CustomHeader;*/
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import colors from '../Constants/Constants';
 
 const CustomHeader = ({ title, onBack, rightComponent }) => (
   <SafeAreaView edges={['top']} style={styles.safeArea}>
@@ -78,7 +79,7 @@ const CustomHeader = ({ title, onBack, rightComponent }) => (
 
 const styles = StyleSheet.create({
   safeArea: {
-    backgroundColor: '#1976D2',
+    backgroundColor: colors.primary,
   },
   container: {
     height: 56,
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 16,
     justifyContent: 'space-between',
-    backgroundColor: '#1976D2',
+    backgroundColor: colors.primary,
   },
   backButton: {
     width: 40,
@@ -99,10 +100,11 @@ const styles = StyleSheet.create({
   },
   title: {
     flex: 1,
-    color: '#fff',
+    color: colors.whileColor,
     fontSize: 20,
     textAlign: 'center',
     marginHorizontal: 8,
+    fontWeight:'600'
     //  backgroundColor:'red'
   },
   right: {
